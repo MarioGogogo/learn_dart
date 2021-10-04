@@ -5,9 +5,6 @@ is 关键词来判断类型
 */
 
 void main(){
-
-  
-
   // var str='1234';
 
   // if(str is String){
@@ -19,8 +16,6 @@ void main(){
   //    print('其他类型');
   // }
 
-
-  
   var str=123;
 
   if(str is String){

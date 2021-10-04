@@ -1,4 +1,13 @@
 /*
+ * @Author: MarioGo
+ * @Date: 2021-09-22 23:38:13
+ * @LastEditTime: 2021-09-28 21:20:44
+ * @LastEditors: MarioGo
+ * @Description: 文件描述
+ * @FilePath: /dart/demo15/01 Null safety 以及可空类型 非空断言.dart
+ * 可以输入预定的版权声明、个性签名、空行等
+ */
+/*
   Null safety翻译成中文的意思是空安全。
 
   null safety 可以帮助开发者避免一些日常开发中很难被发现的错误，并且额外的好处是可以改善性能。
@@ -11,8 +20,8 @@
 
 */
 
-String? getData(apiUrl){
-  if(apiUrl!=null){
+String? getData(apiUrl) {
+  if (apiUrl != null) {
     return "this is server data";
   }
   return null;
@@ -25,61 +34,51 @@ String? getData(apiUrl){
 //   }
 // }
 
-void printLength(String? str){
+void printLength(String? str) {
   try {
-    print(str!.length); 
+    print(str!.length);
   } catch (e) {
-     print("str is null"); 
+    print("str is null");
   }
 }
 
 void main(args) {
-
 //1、 ? 可空类型
-
 
   // int a=123;
   // print(a);
-  
+
   // String username="张三";
   // print(username);
 
   // List<String> l1=["张三","李四","王五"];
   // print(l1);
 
-
   // int a=123;  //非空的int类型
   // a=null;  //A value of type 'Null' can't be assigned to a variable of type 'int'
 
-
   // String username="张三";  //非空的String类型
   // username=null;   //A value of type 'Null' can't be assigned to a variable of type 'String'.
-
 
   // String? username="张三";   // String?  表示username是一个可空类型
   // username=null;
   // print(username);
 
-
   // int? a=123;  //  int? 表示a是一个可空类型
-  // a=null; 
+  // a=null;
   // print(a);
-
 
   // List<String> l1=["张三","李四","王五"];
   // l1=null;  //A value of type 'Null' can't be assigned to a variable of type 'List<String>'.
 
-
   // List<String>? l1=["张三","李四","王五"];
-  // l1=null;  
+  // l1=null;
   // print(l1);
-
 
   //调用方法
   // print(getData("http://www.itying.com"));
 
   // print(getData(null));
-
 
 // ! 类型断言
 
@@ -87,11 +86,11 @@ void main(args) {
 
   // str=null;
 
-  // print(str!.length);  
-  
-   //类型断言: 如果str不等于null 会打印str的长度，如果等于null会抛出异常
+  // print(str!.length);
+
+  //类型断言: 如果str不等于null 会打印str的长度，如果等于null会抛出异常
 
   //  printLength("str");
-  
-   printLength(null);
+
+  printLength(null);
 }
